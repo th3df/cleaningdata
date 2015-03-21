@@ -1,3 +1,7 @@
+# This script processes data in the UCI HAR Dataset.zip archive obtained from:
+# http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+# To produce a tidy data set 
+
 library(dplyr)
 
 # Load the features into a dataframe and convert the names into strings

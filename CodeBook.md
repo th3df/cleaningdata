@@ -3,19 +3,18 @@
 This code book describes the data and analysis performed on the "Human Activity Recognition Using Smartphones Dataset"
 data set of experiments performed by:
 
-==================================================================
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
-activityrecognition@smartlab.ws
+activityrecognition@smartlab.ws  
 www.smartlab.ws 
-==================================================================
 
-## Context
+
+### Context
 
 The experiments involved use of a smart-phone/accelerometers by volunteer subjects in the recording of signals that were
-later interpreted as movements;
+later interpreted as movements.
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
 Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
@@ -33,74 +32,74 @@ acceleration and gravity. The gravitational force is assumed to have only low fr
 filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating 
 variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
-## Dataset inventory
+### Dataset inventory
+
 The dataset includes the following files:
-=========================================
 
-* 'README.txt'
+* **README.txt**
 
-* 'features_info.txt': Shows information about the variables used on the feature vector.
+* **features_info.txt**: Shows information about the variables used on the feature vector.
 
-* 'features.txt': List of 561 features represented as columns in the observation files y_train.txt and y_test.txt.
+* **features.txt**: List of 561 features represented as columns in the observation files y_train.txt and y_test.txt.
 
-* 'activity_labels.txt': Six descriptive name  and their integer mappings that represent activity being performed in a given observation.
+* **activity_labels.txt**: Six descriptive name  and their integer mappings that represent activity being performed in a given observation.
 
-* 'train/X_train.txt': Set of 7352 (rows) observations with 561 columns of feature data each.
+* **train/X_train.txt**: Set of 7352 (rows) observations with 561 columns of feature data each.
 
-* 'train/y_train.txt': A set of 7352 subject labels that map to each row of the observation data in X_train.txt.
+* **train/y_train.txt**: A set of 7352 subject labels that map to each row of the observation data in X_train.txt.
 
-* 'test/X_test.txt': Set of 2947 (rows) observations with 561 columns of feature data each.
+* **test/X_test.txt**: Set of 2947 (rows) observations with 561 columns of feature data each.
 
-* 'test/y_test.txt': A set of 2947 subject labels that map to each row of the observation data in X_test.txt.
+* **test/y_test.txt**: A set of 2947 subject labels that map to each row of the observation data in X_test.txt.
 
-## Transformation of data
+### Transformation of data
 
 The data was manipulated and combined using the script run_analysis.R to produce a tidy data set for further analysis.
 The README file provides a detailed description of the manipulation performed by the script. 
 The following is a qualitative description of the various transformations to produce the final tidy data set.
 
-* combine the "test" and "train" observations into a single table with 561 columns of measurements (features)
-* combine the  "test" and "train" activity labels into a single vector and merge as a column in the observation file  
-* combine the  "test" and "train" subject labels into a single vector and merge as another column in the observation file
+* combine the **test** and **train** observations into a single table with 561 columns of measurements (features)
+* combine the  **test** and **train** activity labels into a single vector and merge as a column in the observation file  
+* combine the  **test** and **train** subject labels into a single vector and merge as another column in the observation file
 * map a descriptive name for activity into each row of the observation file
 * create a separate observation table and select only the columns for features related to mean() or std() (66 columns)
 * for each combination of subject/activity calculation the mean across all observations for each feature (column)
 * write this tide data set of feature averages into a text file.
 
-## The tidy data set
+### The tidy data set
 
 The output of the script is a table (written into a CSV text file) called tidyDataSet.txt. The table contains 180 rows
 and 68 columns. Each row represents a subject/activity combination of the average/mean for each of the 66 chosen features. 
 The subjects labels in column 1 range from 1 to 30 and the activity labels in column 2 are as follows: 
-WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING. 
+**WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.** 
 
 The remaining 66 columns represent the average measurement for the given feature across all observations for that given
 combination of subject and activity.
 
 ## The feature dictionary
 
-The units of the 66 variables/features in the tidy data set are as follows for the various categories:
+**The units of the 66 variables/features in the tidy data set are as follows for the various categories:**
 
-acceleration (Acc) are meters/square second
+*acceleration (Acc) are meters/square second*
 
-jerk (AccJerk) are meters/cube second
+*jerk (AccJerk) are meters/cube second*
 
-gyroscope reading (Gyro) are radians/second
+*gyroscope reading (Gyro) are radians/second*
 
-gyroscope jerk  (GyroJerk) are radians/square second
+*gyroscope jerk  (GyroJerk) are radians/square second*
 
-acceleration magnitude (AccMag) are meters/square sec
+*acceleration magnitude (AccMag) are meters/square sec*
 
-acceleration jerk magnitude (AccJerkMag) are meters/cube sec
+*acceleration jerk magnitude (AccJerkMag) are meters/cube sec*
 
-gyroscope reading magnitude (GyroMag) are radians/second
+*gyroscope reading magnitude (GyroMag) are radians/second*
 
-gyroscope jerk magnitude (GyroJerkMag) are radians/square second
+*gyroscope jerk magnitude (GyroJerkMag) are radians/square second*
 
-Fast Fourier Transform variables have the same units as their corresponding time domain variables as above.
+*Fast Fourier Transform variables have the same units as their corresponding time domain variables as above.*
 
 
-The 66 features are labelled in the tidyDataSet.txt are as below:
+**The 66 features are labelled in the tidyDataSet.txt are as below:**
 
 tBodyAcc_mean___X,
 tBodyAcc_mean___Y,

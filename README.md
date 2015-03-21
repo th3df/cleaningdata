@@ -29,7 +29,7 @@ www.smartlab.ws
 The **UCI HAR Dataset.zip** archive includes a base folder with a **feature.txt**, **features.info**, and **activity_labels.txt** file.
 The archive also includes two sub-folders labelled **test** and **train** that contain preprocessed and raw accelerometer data.
 Each sub-folder (test/train) includes a folder **inertial_signals** containing raw data that is ignored by the script.
-The sub-folders (test/train) also included pre-processed data files that provide input to the run_analysis.R script.
+The sub-folders (test/train) also included pre-processed data files that provide input to the **run_analysis.R** script.
 
 The files (in **train** folder) are described below. The description also applies to the **test** folder.
 
@@ -56,7 +56,7 @@ The script performs then following functions:
 * inserts the feature names into the observations data frame as column labels
 * loads into R the **y_[test/train].txt** files and then consolidates both into a single "activity" vector
 * loads into R the **subject_[test/train].txt** files and then consolidates both into a single "subject" vector
-* Replaces the integer labels in the "activity" vector with the descriptive mappings found in the **activities_labels.txt** file
+* Replaces the integer labels in the "activity" vector with the descriptive mappings found in the **activity_labels.txt** file
 * extracts from the observations data frame into new data frame **DF_mean_std** all columns with feature labels referring to "mean__" or "std__"
 * merges the subject and activity vectors as the first two columns into **DF_mean_std**
 * calculates in **DF_mean_std** for each subject/activity  the mean value for each feature column
