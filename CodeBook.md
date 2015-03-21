@@ -74,9 +74,9 @@ The following is a qualitative description of the various transformations to pro
 ### The tidy data set
 
 The output of the script is a table (written into a CSV text file) called tidyDataSet.txt. The table contains 180 rows
-and 68 columns. Each row represents a summary of feature measurement for each subject/activity combination. The original 
-measurements are summarized via their average for each subject/activity combinaiton. Each column represents
-the average value for that feature over all observations in the raw file for a given subject/activity combination. 
+and 68 columns. Each row represents a summary (average) of feature measurements from the the original observation file
+for each subject/activity combination. Each column represents the average value for that feature over all observations 
+in the raw file for a given subject/activity combination. 
 The subject labels in column 1 range from 1 to 30, representing the volunteers. The activity labels in column 2 are as follows: 
 **WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.** 
 
