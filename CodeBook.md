@@ -83,7 +83,7 @@ The subject labels in column 1 are integers that range from 1 to 30, representin
 The remaining 66 columns represent the average measurement for the given feature across all observations in the raw observation files for that given
 combination of subject and activity.
 
-## The variable dictionary for tidy data frame "set by_subj_activity"
+## The variable dictionary for tidy data frame "set by_subj_activity" / text file "tidyDataSet.txt"
 
 **The units of the two ID variables are:**
 
@@ -112,8 +112,9 @@ combination of subject and activity.
 *Fast Fourier Transform variables have the same units as their corresponding time domain variables as above.*
 
 
-**The 66 features are labelled in the tidyDataSet.txt are as below:**
-
+**The 68 variables labels are as below:**
+subject,  
+activity,  
 tBodyAcc_mean___X,  
 tBodyAcc_mean___Y,  
 tBodyAcc_mean___Z,  
