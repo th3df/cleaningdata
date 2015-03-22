@@ -112,7 +112,7 @@ combination of subject and activity.
 *Fast Fourier Transform variables have the same units as their corresponding time domain variables as above.*
 
 
-**The 68 variables labels are as below:**
+**The 68 variables labels are as below:**  
 subject,  
 activity,  
 tBodyAcc_mean___X,  
