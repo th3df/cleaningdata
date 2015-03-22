@@ -87,9 +87,9 @@ combination of subject and activity.
 
 **The units of the two ID variables are:**
 
-*subject is an integer
+*subject is an integer*
 
-*activity is a factor with six levels as indicated above
+*activity is a factor with six levels as indicated above*
 
 **The units of the 66 variables/features in the tidy data set are as follows for the various categories:**
 
