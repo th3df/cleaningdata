@@ -71,4 +71,4 @@ write.table(by_subj_activity,
             file="tidyDataSet.txt", 
             quote=FALSE, 
             row.names=FALSE,
-            sep=",")
+            sep=" ")

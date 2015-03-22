@@ -77,13 +77,19 @@ The output of the script is a table (written into a CSV text file) called tidyDa
 and 68 columns. Each row represents a summary (average) of feature measurements from the the original observation file
 for each subject/activity combination. Each column represents the average value for that feature over all observations 
 in the raw file for a given subject/activity combination. 
-The subject labels in column 1 range from 1 to 30, representing the volunteers. The activity labels in column 2 are as follows: 
+The subject labels in column 1 are integers that range from 1 to 30, representing the volunteers. The activity labels in column 2 are as follows: 
 **WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.** 
 
 The remaining 66 columns represent the average measurement for the given feature across all observations in the raw observation files for that given
 combination of subject and activity.
 
-## The feature dictionary
+## The variable dictionary for tidy data frame "set by_subj_activity"
+
+**The units of the two ID variables are:**
+
+*subject is an integer
+
+*activity is a factor with six levels as indicated above
 
 **The units of the 66 variables/features in the tidy data set are as follows for the various categories:**
 
